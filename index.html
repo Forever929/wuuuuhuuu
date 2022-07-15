@@ -4,9 +4,72 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Forever</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: #eee;
+      }
+      /* * {
+        border: 1px solid black;
+      } */
+    .flex{
+        display: flex;
+    }
+    .white{
+        background-color: white;
+        margin: 8px;
+    }
+    .flexMain{
+        flex:1;
+    }
+    .column{
+        flex-direction: column;
+    }
+    .shadow{
+        box-shadow: rgb(0 0 0 /20%)0px 2px 1px -1px,
+        rgb(0 0 0 /14%) 0px 1px 1px 0px,rgb(0 0 0 /12%) 0px 1px 3px 0px;
+
+    }   
+    .navigation{
+        padding: 10px 20px;
+        border-bottom: 1px solid rgb(190, 190, 190);
+        font-size: 14px;
+        color: #666;
+    }    
+    .headerbar{
+        padding: 10px 20px;
+        font-size: 14px;
+        color: black;
+    }
+    @media(max-width:600px) {
+        .sidebar{
+            display: none;
+        }
+    }
+    </style>
   </head>
-  <body>
-    <p class="a">Forever</p>
+  <body class="flex">
+    <!-- 侧边栏 -->
+    <div style="width: 200px;z-index: 2; " class="white shadow sidebar">
+        <!-- 导航栏 -->
+        <div class="flexMain">
+            <div class="navigation">简介</div>
+            <div class="navigation">作品</div>
+            <div class="navigation">文章</div>
+            <div class="navigation">联系</div>
+        </div>
+    </div>
+    <!-- 主区域 -->
+    <div class="flex flexMain column">
+        <!-- 头部栏 -->
+        <div style="height: 60px;z-index: 1;" class="white shadow headerbar">
+        <div class="headerBar">DDD</div>
+    </div>
+        <!-- 内容区 -->
+        <div style="overflow: auto"class="flex flexMain white shadow">
+    
+    </div>
   </body>
 </html>
